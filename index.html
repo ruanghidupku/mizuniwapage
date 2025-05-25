@@ -3,527 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kos Mizuniwa - Kos Aman dan Nyaman Penunjang Masa Depan di Yogyakarta. Dekat UMY dan Alma Ata.">
+    <meta name="keywords" content="kos yogyakarta, kos jogja, kos murah, kos dekat umy, kos kasihan bantul">
+    <meta name="author" content="Kos Mizuniwa">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kos-mizuniwa.pages.dev/">
+    <meta property="og:title" content="Kos Mizuniwa - Kos Penunjang Masa Depan">
+    <meta property="og:description" content="Kos Aman dan Nyaman di Yogyakarta. WiFi gratis, dekat kampus, harga terjangkau.">
+    <meta property="og:image" content="https://kos-mizuniwa.pages.dev/assets/images/og-image.jpg">
+
     <title>Kos Mizuniwa - Kos Penunjang Masa Depan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #F5E6D3;
-            --light-cream: #FAF5EF;
-            --beige: #E8D5B7;
-            --brown-accent: #8B6F47;
-            --dark-brown: #5D4E37;
-            --charcoal: #3A3A3A;
-            --white: #FFFFFF;
-            --medium-gray: #7A7A7A;
-            --shadow: rgba(0, 0, 0, 0.08);
-            --red: #D32F2F;
-            --green: #388E3C;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--charcoal);
-            scroll-behavior: smooth;
-            background-color: var(--light-cream);
-        }
-
-        /* Navigation */
-        nav {
-            background: var(--white);
-            box-shadow: 0 2px 10px var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--brown-accent);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--charcoal);
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--brown-accent);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--light-cream) 50%, var(--beige) 100%);
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-            margin-top: 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--beige) 0%, transparent 70%);
-            opacity: 0.3;
-            border-radius: 50%;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--dark-brown);
-            position: relative;
-        }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            color: var(--medium-gray);
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--brown-accent);
-            color: var(--white);
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s;
-            font-weight: 600;
-            position: relative;
-        }
-
-        .cta-button:hover {
-            background: var(--dark-brown);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px var(--shadow);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--dark-brown);
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--brown-accent);
-        }
-
-        /* Location Info */
-        .location-info {
-            background: var(--cream);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-            border: 1px solid var(--beige);
-        }
-
-        .location-title {
-            text-align: center;
-            font-size: 1.5rem;
-            color: var(--dark-brown);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .location-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .location-item {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid var(--beige);
-            transition: all 0.3s;
-        }
-
-        .location-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px var(--shadow);
-        }
-
-        .location-name {
-            font-weight: 600;
-            color: var(--dark-brown);
-            margin-bottom: 0.5rem;
-        }
-
-        .location-distance {
-            color: var(--brown-accent);
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        /* Price Category Headers */
-        .price-category {
-            text-align: center;
-            background: var(--beige);
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            margin: 3rem 0 1.5rem;
-            border: 2px solid var(--brown-accent);
-        }
-
-        .price-category h3 {
-            color: var(--dark-brown);
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-category p {
-            color: var(--medium-gray);
-            font-size: 1rem;
-        }
-
-        /* Room Cards */
-        .room-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .room-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px var(--shadow);
-            transition: transform 0.3s;
-            border: 1px solid var(--cream);
-            position: relative;
-        }
-
-        .room-card.unavailable {
-            opacity: 0.7;
-        }
-
-        .room-card.unavailable::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.5);
-            pointer-events: none;
-        }
-
-        .room-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(139, 111, 71, 0.15);
-        }
-
-        .room-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            position: relative;
-        }
-
-        .availability-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            z-index: 2;
-        }
-
-        .availability-badge.available {
-            background: var(--green);
-            color: var(--white);
-        }
-
-        .availability-badge.unavailable {
-            background: var(--red);
-            color: var(--white);
-        }
-
-        .room-content {
-            padding: 2rem;
-        }
-
-        .room-type {
-            color: var(--brown-accent);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .room-name {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark-brown);
-        }
-
-        .room-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .room-features li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--medium-gray);
-        }
-
-        .room-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--brown-accent);
-        }
-
-        .room-price {
-            font-size: 1.8rem;
-            color: var(--brown-accent);
-            font-weight: bold;
-        }
-
-        .price-period {
-            font-size: 1rem;
-            color: var(--medium-gray);
-            font-weight: normal;
-        }
-
-        .tenant-info {
-            background: var(--cream);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .tenant-info strong {
-            color: var(--dark-brown);
-        }
-
-        /* Facilities */
-        .facilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .facility-item {
-            text-align: center;
-            padding: 2rem;
-            background: var(--cream);
-            border-radius: 10px;
-            transition: all 0.3s;
-            border: 1px solid var(--beige);
-        }
-
-        .facility-item:hover {
-            background: var(--beige);
-            transform: translateY(-5px);
-            border-color: var(--brown-accent);
-        }
-
-        .facility-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .facility-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--dark-brown);
-            margin-bottom: 0.5rem;
-        }
-
-        .facility-desc {
-            color: var(--medium-gray);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--cream);
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-            border: 1px solid var(--beige);
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--brown-accent);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-brown);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Loading State */
-        .loading {
-            text-align: center;
-            padding: 2rem;
-            color: var(--medium-gray);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .room-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .location-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .price-category h3 {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Japanese Pattern Background */
-        .pattern-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, var(--beige) 35px, var(--beige) 70px),
-                repeating-linear-gradient(-45deg, transparent, transparent 35px, var(--beige) 35px, var(--beige) 70px);
-            pointer-events: none;
-        }
-
-        /* Special Notes */
-        .special-note {
-            background: var(--beige);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: var(--dark-brown);
-            text-align: center;
-        }
-
-        .sync-status {
-            text-align: center;
-            padding: 1rem;
-            background: var(--cream);
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-        }
-
-        .sync-status.success {
-            color: var(--green);
-        }
-
-        .sync-status.error {
-            color: var(--red);
-        }
-    </style>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
     <!-- Navigation -->
@@ -537,8 +34,24 @@
                 <li><a href="#fasilitas">Fasilitas</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="#kamar">Kamar</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -553,35 +66,8 @@
         <h2 class="section-title">Lokasi Strategis</h2>
         <div class="location-info fade-in">
             <h3 class="location-title">Jarak ke Fasilitas Umum</h3>
-            <div class="location-grid">
-                <div class="location-item">
-                    <div class="location-name">🏟 Lapangan Tamantirto ꦭꦥꦁꦔꦤ꧀ꦠꦩꦤ꧀ꦠꦶꦂꦠ</div>
-                    <div class="location-distance">700 m</div>
-                </div>
-                <div class="location-item">
-                    <div class="location-name">🏪 Alfamart / Indomaret</div>
-                    <div class="location-distance">700-900 m</div>
-                </div>
-                <div class="location-item">
-                    <div class="location-name">🎓 Universitas Muhammadiyah Yogyakarta</div>
-                    <div class="location-distance">2 km</div>
-                </div>
-                <div class="location-item">
-                    <div class="location-name">🎓 Universitas Alma Ata Yogyakarta</div>
-                    <div class="location-distance">2 km</div>
-                </div>
-                <div class="location-item">
-                    <div class="location-name">🏥 Rumah Sakit PKU Gamping</div>
-                    <div class="location-distance">5 km</div>
-                </div>
-                <div class="location-item">
-                    <div class="location-name">🚂 Stasiun Tugu</div>
-                    <div class="location-distance">8 km</div>
-                </div>
-                <div class="location-item">
-                    <div class="location-name">✈️ Yogyakarta International Airport</div>
-                    <div class="location-distance">39 km</div>
-                </div>
+            <div class="location-grid" id="locationGrid">
+                <!-- Location items will be loaded by JavaScript -->
             </div>
         </div>
     </section>
@@ -590,51 +76,25 @@
     <section id="kamar">
         <h2 class="section-title">Kamar Tersedia</h2>
         <div class="sync-status" id="syncStatus">
-            Memuat data ketersediaan kamar...
+            <div class="loading-spinner"></div>
+            <span>Memuat data ketersediaan kamar...</span>
         </div>
         <div class="special-note fade-in">
             <strong>Semua kamar non-AC dengan ventilasi alami yang baik • Total 7 kamar tersedia</strong>
         </div>
-
         <div id="roomsContainer">
-            <div class="loading">Memuat data kamar...</div>
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Memuat data kamar...</p>
+            </div>
         </div>
     </section>
 
     <!-- Facilities Section -->
     <section id="fasilitas">
         <h2 class="section-title">Fasilitas Kos</h2>
-        <div class="facilities-grid">
-            <div class="facility-item fade-in">
-                <div class="facility-icon">🌐</div>
-                <h3 class="facility-name">Free WiFi</h3>
-                <p class="facility-desc">Internet cepat coverage di seluruh area</p>
-            </div>
-            <div class="facility-item fade-in">
-                <div class="facility-icon">🍳</div>
-                <h3 class="facility-name">Dapur Bersama</h3>
-                <p class="facility-desc">Kompor dan alat makan/minum tersedia untuk digunakan bersama</p>
-            </div>
-            <div class="facility-item fade-in">
-                <div class="facility-icon">♻️</div>
-                <h3 class="facility-name">Free Iuran Sampah</h3>
-                <p class="facility-desc">Sampah terkelola dengan baik, tidak ada biaya tambahan</p>
-            </div>
-            <div class="facility-item fade-in">
-                <div class="facility-icon">🏍️</div>
-                <h3 class="facility-name">Parkir Motor</h3>
-                <p class="facility-desc">Area parkir khusus motor yang aman dan luas</p>
-            </div>
-            <div class="facility-item fade-in">
-                <div class="facility-icon">📹</div>
-                <h3 class="facility-name">CCTV 24 Jam</h3>
-                <p class="facility-desc">Keamanan terjaga dengan kamera CCTV di area strategis</p>
-            </div>
-            <div class="facility-item fade-in">
-                <div class="facility-icon">🏠</div>
-                <h3 class="facility-name">Rumah 2 Lantai</h3>
-                <p class="facility-desc">Bangunan 2 lantai dengan area bersantai yang nyaman</p>
-            </div>
+        <div class="facilities-grid" id="facilitiesGrid">
+            <!-- Facilities will be loaded by JavaScript -->
         </div>
     </section>
 
@@ -657,321 +117,23 @@
                     <span>ruanghidupku@gmail.com</span>
                 </div>
             </div>
-            <a href="https://wa.me/6289688671977" class="cta-button" style="margin-top: 2rem;">Chat WhatsApp</a>
+            <a href="https://wa.me/6289688671977?text=Halo,%20saya%20tertarik%20dengan%20Kos%20Mizuniwa" 
+               class="cta-button" 
+               target="_blank"
+               rel="noopener noreferrer"
+               style="margin-top: 2rem;">
+               Chat WhatsApp
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Kos Mizuniwa. All rights reserved. | 瑞庭 - Hunian Nyaman di Yogyakarta</p>
+        <p>&copy; 2025 Kos Mizuniwa (水庭). All rights reserved. | Kos Penunjang Masa Depan Anda</p>
     </footer>
 
-    <script>
-        // Configuration - Replace with your actual Google Sheets details
-        const SHEET_ID = '1rW8Fa1-2ODIL4LSaRgOBNpuGaLPGk1KT5GEA1sLcXqA'; // Ganti dengan ID spreadsheet Anda
-        const API_KEY = 'AIzaSyB9Vu49ukD34L2GLTXkeAQGWLWukNYim8M'; // Ganti dengan API key Anda
-        const RANGE = 'data_kamar!A:I'; // Range data di spreadsheet
-
-        // Room data structure (static fallback)
-        const staticRoomData = {
-            "650000": {
-                title: "Rp 650.000/bulan",
-                description: "Kamar lantai bawah dengan fasilitas dasar",
-                rooms: [
-                    {
-                        id: 2,
-                        type: "Kamar 2",
-                        name: "Kamar Bawah Depan",
-                        location: "Posisi depan rumah",
-                        features: [
-                            "Ranjang single dengan kasur",
-                            "Kamar mandi bersama",
-                            "Free WiFi",
-                            "Dekat pintu masuk"
-                        ],
-                        price: "Rp 650.000"
-                    },
-                    {
-                        id: 3,
-                        type: "Kamar 3",
-                        name: "Kamar Dekat Dapur",
-                        location: "Akses mudah ke dapur bersama",
-                        features: [
-                            "Ranjang single dengan kasur",
-                            "Kamar mandi bersama",
-                            "Free WiFi",
-                            "Dekat area dapur"
-                        ],
-                        price: "Rp 650.000"
-                    }
-                ]
-            },
-            "700000": {
-                title: "Rp 700.000/bulan",
-                description: "Kamar lantai atas dengan kamar mandi bersama",
-                rooms: [
-                    {
-                        id: 4,
-                        type: "Kamar 4",
-                        name: "Kamar Atas Belakang",
-                        location: "Kamar mandi bersama",
-                        features: [
-                            "Kamar lebih luas",
-                            "Ranjang single dengan kasur",
-                            "Kamar mandi bersama",
-                            "Free WiFi",
-                            "Posisi belakang, lebih tenang"
-                        ],
-                        price: "Rp 700.000"
-                    },
-                    {
-                        id: 5,
-                        type: "Kamar 5",
-                        name: "Kamar Atas Depan",
-                        location: "Kamar mandi bersama",
-                        features: [
-                            "Kamar lebih luas",
-                            "Ranjang single dengan kasur",
-                            "Kamar mandi bersama",
-                            "Free WiFi",
-                            "View depan rumah"
-                        ],
-                        price: "Rp 700.000"
-                    }
-                ]
-            },
-            "750000": {
-                title: "Rp 750.000/bulan",
-                description: "Kamar premium dengan kamar mandi dalam atau lokasi istimewa",
-                rooms: [
-                    {
-                        id: 1,
-                        type: "Kamar 1",
-                        name: "Kamar Parkiran",
-                        location: "Depan garasi",
-                        features: [
-                            "Ranjang single dengan kasur",
-                            "Kamar mandi dalam (closet duduk)",
-                            "Free WiFi",
-                            "Akses mudah ke parkiran"
-                        ],
-                        price: "Rp 750.000"
-                    },
-                    {
-                        id: 6,
-                        type: "Kamar 6 - Premium",
-                        name: "Kamar Atas Depan Privat",
-                        location: "Kamar mandi dalam",
-                        features: [
-                            "Ranjang single dengan kasur",
-                            "Kamar mandi dalam (closet duduk)",
-                            "Free WiFi",
-                            "Privasi maksimal"
-                        ],
-                        price: "Rp 750.000"
-                    },
-                    {
-                        id: 7,
-                        type: "Kamar 7 - Premium",
-                        name: "Kamar Atas Belakang Privat",
-                        location: "Kamar mandi dalam",
-                        features: [
-                            "Ranjang single dengan kasur",
-                            "Kamar mandi dalam (closet duduk)",
-                            "Free WiFi",
-                            "Tenang dan privat"
-                        ],
-                        price: "Rp 750.000"
-                    }
-                ]
-            }
-        };
-
-        // Function to fetch data from Google Sheets
-        async function fetchRoomData() {
-            try {
-                const response = await fetch(
-                    `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`
-                );
-                
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-                
-                const data = await response.json();
-                return parseSheetData(data.values);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-                document.getElementById('syncStatus').innerHTML = 
-                    '<span class="error">⚠️ Gagal memuat data real-time. Menampilkan data statis.</span>';
-                return null;
-            }
-        }
-
-        // Parse sheet data
-        function parseSheetData(rows) {
-            if (!rows || rows.length < 2) return null;
-            
-            const headers = rows[0];
-            const roomStatus = {};
-            
-            for (let i = 1; i < rows.length; i++) {
-                const row = rows[i];
-                roomStatus[row[0]] = {
-                    status: row[3],
-                    tenant: row[4],
-                    contact: row[5],
-                    checkin: row[6],
-                    checkout: row[7]
-                };
-            }
-            
-            return roomStatus;
-        }
-
-        // Render rooms with dynamic status
-        function renderRooms(roomStatusData) {
-            const container = document.getElementById('roomsContainer');
-            let html = '';
-
-            // Render each price category
-            Object.keys(staticRoomData).forEach(priceKey => {
-                const category = staticRoomData[priceKey];
-                
-                html += `
-                    <div class="price-category fade-in">
-                        <h3>${category.title}</h3>
-                        <p>${category.description}</p>
-                    </div>
-                    <div class="room-grid">
-                `;
-
-                category.rooms.forEach(room => {
-                    const status = roomStatusData ? roomStatusData[room.id.toString()] : null;
-                    const isAvailable = !status || status.status === 'TERSEDIA';
-                    
-                    html += `
-                        <div class="room-card fade-in ${!isAvailable ? 'unavailable' : ''}">
-                            <div style="position: relative;">
-                                <img src="https://images.pexels.com/photos/5461586/pexels-photo-5461586.jpeg" 
-                                     alt="${room.name}" class="room-image">
-                                <div class="availability-badge ${isAvailable ? 'available' : 'unavailable'}">
-                                    ${isAvailable ? 'TERSEDIA' : 'TERISI'}
-                                </div>
-                            </div>
-                            <div class="room-content">
-                                <div class="room-type">${room.type}</div>
-                                <h3 class="room-name">${room.name}</h3>
-                                <p style="color: var(--medium-gray); font-size: 0.9rem; margin-bottom: 1rem;">
-                                    ${room.location}
-                                </p>
-                                <ul class="room-features">
-                                    ${room.features.map(feature => `<li>${feature}</li>`).join('')}
-                                </ul>
-                                <div class="room-price">
-                                    ${room.price}
-                                    <span class="price-period">/bulan</span>
-                                </div>
-                                ${!isAvailable && status ? `
-                                    <div class="tenant-info">
-                                        <strong>Status:</strong> Terisi hingga ${formatDate(status.checkout)}
-                                    </div>
-                                ` : ''}
-                            </div>
-                        </div>
-                    `;
-                });
-
-                html += '</div>';
-            });
-
-            container.innerHTML = html;
-            
-            // Update sync status
-            if (roomStatusData) {
-                document.getElementById('syncStatus').innerHTML = 
-                    '<span class="success">✓ Data berhasil disinkronkan dari Google Sheets</span>';
-            }
-        }
-
-        // Format date
-        function formatDate(dateString) {
-            if (!dateString) return 'N/A';
-            const parts = dateString.split('/');
-            if (parts.length !== 3) return dateString;
-            
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 
-                          'Jul', 'Agt', 'Sep', 'Okt', 'Nov', 'Des'];
-            const month = parseInt(parts[1]) - 1;
-            return `${parts[0]} ${months[month]} ${parts[2]}`;
-        }
-
-        // Initialize
-        async function init() {
-            // First render with static data
-            renderRooms(null);
-            
-            // Then try to fetch dynamic data
-            const dynamicData = await fetchRoomData();
-            if (dynamicData) {
-                renderRooms(dynamicData);
-            }
-        }
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.1s';
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
-
-        // Add shadow to navigation on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
-            }
-        });
-
-        // Auto refresh data every 5 minutes
-        setInterval(async () => {
-            const dynamicData = await fetchRoomData();
-            if (dynamicData) {
-                renderRooms(dynamicData);
-            }
-        }, 300000); // 5 minutes
-
-        // Initialize on load
-        window.addEventListener('load', init);
-    </script>
+    <!-- Scripts -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
