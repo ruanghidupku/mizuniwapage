@@ -58,12 +58,12 @@ const STATIC_ROOM_DATA = {
                 location: "Posisi depan rumah",
                 features: [
                     "Ranjang single dengan kasur",
-                    "Kamar mandi bersama",
+                    "Kamar mandi dalam (closet duduk)",
                     "Free WiFi",
                     "Dekat pintu masuk"
                 ],
                 price: "Rp 650.000",
-                image: "https://images.pexels.com/photos/5461586/pexels-photo-5461586.jpeg"
+                image: "assets/images/2.png"
             },
             {
                 id: 3,
@@ -72,12 +72,12 @@ const STATIC_ROOM_DATA = {
                 location: "Akses mudah ke dapur bersama",
                 features: [
                     "Ranjang single dengan kasur",
-                    "Kamar mandi bersama",
+                    "Kamar mandi dalam (closet duduk)",
                     "Free WiFi",
                     "Dekat area dapur"
                 ],
                 price: "Rp 650.000",
-                image: "https://images.pexels.com/photos/5461586/pexels-photo-5461586.jpeg"
+                image: "assets/images/3.png"
             }
         ]
     },
@@ -93,12 +93,12 @@ const STATIC_ROOM_DATA = {
                 features: [
                     "Kamar lebih luas",
                     "Ranjang single dengan kasur",
-                    "Kamar mandi bersama",
+                    "Kamar mandi bersama (closet duduk)",
                     "Free WiFi",
                     "Posisi belakang, lebih tenang"
                 ],
                 price: "Rp 700.000",
-                image: "https://images.pexels.com/photos/5461588/pexels-photo-5461588.jpeg"
+                image: "assets/images/4.png"
             },
             {
                 id: 5,
@@ -108,12 +108,12 @@ const STATIC_ROOM_DATA = {
                 features: [
                     "Kamar lebih luas",
                     "Ranjang single dengan kasur",
-                    "Kamar mandi bersama",
+                    "Kamar mandi bersama (closet duduk)",
                     "Free WiFi",
                     "View depan rumah"
                 ],
                 price: "Rp 700.000",
-                image: "https://images.pexels.com/photos/5461588/pexels-photo-5461588.jpeg"
+                image: "assets/images/5.png"
             }
         ]
     },
@@ -133,7 +133,7 @@ const STATIC_ROOM_DATA = {
                     "Akses mudah ke parkiran"
                 ],
                 price: "Rp 750.000",
-                image: "https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg"
+                image: "assets/images/1.png"
             },
             {
                 id: 6,
@@ -147,7 +147,7 @@ const STATIC_ROOM_DATA = {
                     "Privasi maksimal"
                 ],
                 price: "Rp 750.000",
-                image: "https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg"
+                image: "assets/images/6.png"
             },
             {
                 id: 7,
@@ -161,7 +161,7 @@ const STATIC_ROOM_DATA = {
                     "Tenang dan privat"
                 ],
                 price: "Rp 750.000",
-                image: "https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg"
+                image: "assets/images/7.png"
             }
         ]
     }
@@ -307,7 +307,8 @@ function renderRooms(roomStatusData) {
                         <img src="${room.image}" 
                              alt="${room.name}" 
                              class="room-image"
-                             loading="lazy">
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/5461586/pexels-photo-5461586.jpeg'">
                         <div class="availability-badge ${isAvailable ? 'available' : 'unavailable'}">
                             ${isAvailable ? 'TERSEDIA' : 'TERISI'}
                         </div>
