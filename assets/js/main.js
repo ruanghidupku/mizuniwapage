@@ -28,13 +28,13 @@ const getConfig = () => {
 
 // Data constants
 const LOCATIONS = [
-    { icon: '🏟', name: 'Lapangan Tamantirto ꦭꦥꦁꦔꦤ꧀ꦠꦩꦤ꧀ꦠꦶꦂꦠ', distance: '700 m' },
-    { icon: '🏪', name: 'Alfamart / Indomaret', distance: '700-900 m' },
+    { icon: '🏟', name: 'Lapangan Tamantirto ꦭꦥꦁꦔꦤ꧀ꦠꦩꦤ꧀ꦠꦶꦂꦠ', distance: '400 m' },
+    { icon: '🏪', name: 'Alfamart / Indomaret', distance: '350-600 m' },
     { icon: '🎓', name: 'Universitas Muhammadiyah Yogyakarta', distance: '2 km' },
-    { icon: '🎓', name: 'Universitas Alma Ata Yogyakarta', distance: '2 km' },
-    { icon: '🏥', name: 'Rumah Sakit PKU Gamping', distance: '5 km' },
-    { icon: '🚂', name: 'Stasiun Tugu', distance: '8 km' },
-    { icon: '✈️', name: 'Yogyakarta International Airport', distance: '39 km' }
+    { icon: '🎓', name: 'Universitas Alma Ata Yogyakarta', distance: '1,2 km' },
+    { icon: '🏥', name: 'Rumah Sakit PKU Gamping', distance: '3,4 km' },
+    { icon: '🚂', name: 'Stasiun Tugu', distance: '5,8 km' },
+    { icon: '✈️', name: 'Yogyakarta International Airport', distance: '31 km' }
 ];
 
 const FACILITIES = [
