@@ -308,7 +308,7 @@ function renderRooms(roomStatusData) {
                              alt="${room.name}" 
                              class="room-image"
                              loading="lazy"
-                             onerror="this.src='https://images.pexels.com/photos/5461586/pexels-photo-5461586.jpeg'">
+                             onerror="this.src='assets/images/default.jpg'">
                         <div class="availability-badge ${isAvailable ? 'available' : 'unavailable'}">
                             ${isAvailable ? 'TERSEDIA' : 'TERISI'}
                         </div>
