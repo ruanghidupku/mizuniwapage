@@ -176,7 +176,7 @@ const formatDate = (dateString) => {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 
                   'Jul', 'Agt', 'Sep', 'Okt', 'Nov', 'Des'];
     const month = parseInt(parts[1]) - 1;
-    return `${parts[0]} ${months[month]} ${parts[2]}`;
+    return `${months[month]} ${parts[2]}`;
 };
 
 const showError = (message) => {
